@@ -27,7 +27,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: cd deploy-v1-pages && npm ci
 
       - name: Build develop preview
         if: github.ref == 'refs/heads/develop' || github.base_ref == 'develop'
@@ -74,7 +74,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: cd deploy-v1-pages && npm ci
 
       - name: Build staging
         run: npm run build
